@@ -117,7 +117,7 @@ getConnected() // Check we have a database connection
           message = await getYesterdayMatchesMessage();
         } else if (payload.event.text && 
                    payload.event.text.match(/\bnext [0-9]+ matches\b/i)) {
-          var number = payload.event.text.match(/\bnext (0-9+) matches\b/i)[1];
+          var number = payload.event.text.match(/\bnext ([0-9]+) matches\b/i)[1];
           message = await getNextXMatchesMessage(number);
         } else if (payload.event.text && 
                    payload.event.text.match(/\blast [0-9]+ (results|matches)\b/i)) {
